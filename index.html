@@ -44,16 +44,18 @@
             <div class="home-content">
                 <img src="Images/DP1.JPG"
                     alt="Profile Image" class="profile-img">
-                <h1 style="font-family: Allura">Nakhungu Dunstan</h1>
+                <h1 style="font-family: Allura; background: linear-gradient(to right,rgb(179, 4, 115),rgb(4, 13, 144));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent">Nakhungu Dunstan.</h1>
                 <h2 style=" color:wheat">A <span class="text11"></span></h2>
                 <p class="pgraph">I create websites and develop mobile Apps. <br>This is my official page
                     having my personal details and portifolios.<br>
                 <a href="#portfolio" class="btn">View My Work</a>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/dunstan-19"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/dunny-nakhungu" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/dunstan-19"target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/Dunnie.2"target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/dunstannakhungu" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -255,19 +257,32 @@
                         </div>
                     </div>
                 </div>
+                
+                <script>
+                    function validateForm() {
+                        var x = document.forms["formone"]["name"].value;
+                        if (x == "") {
+                            alert("Names must be filled out");
+                            return false;
+                        }
+                    }
+                </script>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                    <form id="contactForm" name="formone" action="https://api.web3forms.com/submit" method="POST">
+                        <div  class="form-group">
+                        <input type="hidden" name="access_key"value="45fc51da-ce8a-480e-b8b8-5eab329222fa">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                            <input type="text" name="subject" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message"  placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
@@ -280,7 +295,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo"><p style="color:aliceblue">Dunstan<span>Nakhungu</span></p></div>
+                <div class="logo"><p style="color:aliceblue;font-family: Cursive">Dunstan <span>Nakhungu</span></p></div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
